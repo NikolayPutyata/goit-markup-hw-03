@@ -1,32 +1,37 @@
-html {
-  box-sizing: border-box;
-}
-*,
-*::before::after {
-  box-sizing: inherit;
-}
-
 :root {
   --main-heading-color: #212121;
   --main-backlight-color: #2196f3;
   --main-paragraph-color: #757575;
   --some-title-color: #ffffff;
+  --some-button-color: #f5f4fa;
+}
+h1 {
+  padding: 0px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+button {
+  cursor: pointer;
 }
 .body {
   font-family: 'roboto', sans-serif;
 }
 /*------------------------------------------------------------HEADER BLOCK---------------------------------------------------------*/
 .header {
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
-.header-conteiner {
+.header-container {
   display: flex;
   align-items: center;
-  margin-right: auto;
-}
-.contacts-container {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
 }
 /*LOGO*/
 .header-logo {
@@ -41,24 +46,44 @@ html {
   color: var(--main-heading-color);
 }
 /*NAVIGATION*/
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  margin-right: 93px;
+}
 .navigation {
   list-style: none;
+  display: flex;
 }
+.navigation-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .navigation-link {
   color: var(--main-heading-color);
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .navigation-link:hover,
 .navigation-link:focus {
   color: var(--main-backlight-color);
 }
 /*CONTACTS*/
+.header-contacts {
+  margin-left: auto;
+}
 .contacts {
   list-style: none;
-  display: inline-block;
+  display: flex;
+}
+.contacts-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contacts-link {
@@ -67,6 +92,8 @@ html {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -78,6 +105,7 @@ html {
 .hero {
   background-color: #2f303a;
   text-align: center;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -90,7 +118,6 @@ html {
   padding: 200px 452px 0px 452px;
   margin-top: 0px;
   margin-bottom: 30px;
-  outline: 5px solid tomato;
 }
 
 .hero-button {
@@ -104,12 +131,15 @@ html {
   letter-spacing: 0.06em;
   border-radius: 4px;
   padding: 10px 32px 10px 32px;
+  margin-top: 30px;
 }
 .hero-button:focus,
 .hero-button:hover {
   background-color: #188ce8;
 }
 /*FEATURES*/
+.features-section {
+}
 .features {
   list-style: none;
   display: flex;
@@ -136,6 +166,9 @@ html {
   padding-right: 30px;
 }
 /*OWN-WORK*/
+.own-work-section {
+  padding-bottom: 94px;
+}
 .own-work {
   color: var(--main-heading-color);
   font-weight: 700;
@@ -143,6 +176,7 @@ html {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  padding-top: 93px;
 }
 .works {
   list-style: none;
@@ -152,6 +186,11 @@ html {
   margin-right: 30px;
 }
 /*TEAM*/
+.own-team-section {
+  background-color: var(--some-button-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .own-team {
   color: var(--main-heading-color);
   font-weight: 700;
@@ -189,6 +228,10 @@ html {
 }
 
 /*---------------------------------------------------------MAIN BLOCK PORTFOLIO------------------------------------------------------------*/
+.portfolio-section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
 /*FILTER*/
 .filter {
   list-style: none;
@@ -205,8 +248,9 @@ html {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  background-color: VAR(--some-title-color);
+  background-color: var(--some-button-color);
   border-radius: 4px;
+  border-color: var(--some-button-color);
 }
 
 .filter-button:hover,
@@ -245,6 +289,8 @@ html {
 /*----------------------------------------------------------Footer---------------------------------------------------------------------*/
 .footer {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 /*LOGO*/
 .footer-logo {
@@ -262,8 +308,6 @@ html {
 }
 /*NAVIGATION*/
 .address {
-  margin-top: 30px;
-  padding-left: 215px;
 }
 .footer-list {
   list-style: none;
