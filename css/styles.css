@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before::after {
+  box-sizing: inherit;
+}
+
 :root {
   --main-heading-color: #212121;
   --main-backlight-color: #2196f3;
@@ -10,8 +18,15 @@
 /*------------------------------------------------------------HEADER BLOCK---------------------------------------------------------*/
 .header {
 }
-.container {
-  display: inline;
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.contacts-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
 /*LOGO*/
 .header-logo {
@@ -43,6 +58,7 @@
 /*CONTACTS*/
 .contacts {
   list-style: none;
+  display: inline-block;
 }
 
 .contacts-link {
@@ -61,6 +77,7 @@
 /*HERO*/
 .hero {
   background-color: #2f303a;
+  text-align: center;
 }
 
 .hero-title {
@@ -68,10 +85,12 @@
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  padding: 200px 452px 280px 452px;
+  padding: 200px 452px 0px 452px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  outline: 5px solid tomato;
 }
 
 .hero-button {
@@ -84,6 +103,7 @@
   line-height: 1.87;
   letter-spacing: 0.06em;
   border-radius: 4px;
+  padding: 10px 32px 10px 32px;
 }
 .hero-button:focus,
 .hero-button:hover {
@@ -143,6 +163,7 @@
 .team {
   list-style: none;
   display: flex;
+  text-align: center;
 }
 .team-item {
   margin-right: 30px;
@@ -224,8 +245,6 @@
 /*----------------------------------------------------------Footer---------------------------------------------------------------------*/
 .footer {
   background-color: #2f303a;
-  display: flex;
-  flex-wrap: wrap;
 }
 /*LOGO*/
 .footer-logo {
@@ -242,8 +261,15 @@
   color: var(--some-title-color);
 }
 /*NAVIGATION*/
+.address {
+  margin-top: 30px;
+  padding-left: 215px;
+}
 .footer-list {
   list-style: none;
+}
+.footer-item {
+  margin-bottom: 9px;
 }
 
 .footer-map {
