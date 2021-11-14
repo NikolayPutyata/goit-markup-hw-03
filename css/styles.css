@@ -256,8 +256,9 @@ button {
   letter-spacing: 0.03em;
   background-color: var(--some-button-color);
   border-radius: 4px;
-  border-color: var(--some-button-color);
   margin-right: 8px;
+  border-width: 0px;
+  padding: 6px 22px;
 }
 .filter-buttun:not(:last-child) {
   margin-right: 8px;
