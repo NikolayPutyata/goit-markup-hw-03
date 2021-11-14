@@ -163,6 +163,8 @@ button {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+.features-text:not(:last-child) {
   padding-right: 30px;
 }
 /*OWN-WORK*/
@@ -177,6 +179,7 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   padding-top: 93px;
+  padding-bottom: 50px;
 }
 .works {
   list-style: none;
@@ -311,6 +314,7 @@ button {
 }
 .footer-list {
   list-style: none;
+  padding-top: 20px;
 }
 .footer-item {
   margin-bottom: 9px;
