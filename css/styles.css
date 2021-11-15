@@ -6,15 +6,22 @@
   --some-button-color: #f5f4fa;
   --border-color: #eeeeee;
 }
-h1 {
+h1,
+h2,
+h3,
+p {
   padding: 0px;
+  margin: 0;
 }
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .container {
   width: 1200px;
@@ -59,7 +66,6 @@ button {
   margin-right: 93px;
 }
 .navigation {
-  list-style: none;
   display: flex;
 }
 .navigation-item:not(:last-child) {
@@ -84,7 +90,7 @@ button {
   margin-left: auto;
 }
 .contacts {
-  list-style: none;
+  margin-left: auto;
   display: flex;
 }
 .contacts-item:not(:last-child) {
@@ -111,6 +117,7 @@ button {
   background-color: #2f303a;
   text-align: center;
   padding-bottom: 200px;
+  padding-top: 200px;
 }
 
 .hero-title {
@@ -120,9 +127,10 @@ button {
   line-height: 1.36;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  padding: 200px 452px 0px 452px;
   margin-top: 0px;
   margin-bottom: 30px;
+  margin-left: 452px;
+  margin-right: 452px;
 }
 
 .hero-button {
@@ -135,19 +143,17 @@ button {
   letter-spacing: 0.06em;
   border-radius: 4px;
   padding: 10px 32px 10px 32px;
-  margin-top: 30px;
 }
 .hero-button:focus,
 .hero-button:hover {
   background-color: #188ce8;
 }
 /*FEATURES*/
-.features-section {
+.section {
+  padding: 94px 0px;
 }
 .features {
-  list-style: none;
   display: flex;
-  margin-top: 94px;
 }
 .features-item {
   display: inline;
@@ -160,6 +166,7 @@ button {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .features-text {
   color: var(--main-paragraph-color);
@@ -173,7 +180,7 @@ button {
 }
 /*OWN-WORK*/
 .own-work-section {
-  padding-bottom: 94px;
+  padding-top: 0;
 }
 .own-work {
   color: var(--main-heading-color);
@@ -182,21 +189,17 @@ button {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-top: 93px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .works {
-  list-style: none;
   display: flex;
 }
-.works-item {
+.works-item:not(:last-child) {
   margin-right: 30px;
 }
 /*TEAM*/
 .own-team-section {
   background-color: var(--some-button-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 .own-team {
   color: var(--main-heading-color);
@@ -205,14 +208,17 @@ button {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
 }
 .team {
-  list-style: none;
   display: flex;
   text-align: center;
 }
-.team-item {
+.team-item:not(:last-child) {
   margin-right: 30px;
+}
+.team-main-text {
+  padding: 30px 30px;
 }
 .team-img {
   display: block;
@@ -225,6 +231,7 @@ button {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 .team-text {
   color: var(--main-paragraph-color);
@@ -241,11 +248,14 @@ button {
 }
 /*FILTER*/
 .filter {
-  list-style: none;
   display: flex;
   justify-content: center;
 }
 .filter-item {
+  margin-right: 8px;
+}
+.filter-item:not(:last-child) {
+  margin-right: 8px;
 }
 .filter-button {
   font-style: normal;
@@ -256,14 +266,9 @@ button {
   letter-spacing: 0.03em;
   background-color: var(--some-button-color);
   border-radius: 4px;
-  margin-right: 8px;
   border-width: 0px;
   padding: 6px 22px;
 }
-.filter-buttun:not(:last-child) {
-  margin-right: 8px;
-}
-
 .filter-button:hover,
 .filter-button:focus {
   color: var(--some-title-color);
@@ -271,11 +276,11 @@ button {
 }
 /*GALLERY*/
 .gallery {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
-  margin-top: 34px;
+  margin-top: 50px;
+  margin-bottom: -30px;
 }
 .gallery-img {
   display: block;
@@ -283,10 +288,11 @@ button {
   height: auto;
 }
 .gallery-item {
-  flex-basis: calc((100% - 9 * 30px) / 3);
   margin-left: 30px;
-  border: 1px solid var(--border-color);
   margin-bottom: 30px;
+}
+.gallery-item-text {
+  padding: 20px 24px 20px 24px;
 }
 .gallery-link {
   text-decoration: none;
@@ -298,8 +304,6 @@ button {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 .gallery-text {
   color: var(--main-paragraph-color);
@@ -307,8 +311,6 @@ button {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 
 /*----------------------------------------------------------Footer---------------------------------------------------------------------*/
@@ -336,9 +338,8 @@ button {
 }
 .footer-list {
   list-style: none;
-  padding-top: 20px;
 }
-.footer-item {
+.footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
