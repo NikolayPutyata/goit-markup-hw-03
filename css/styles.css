@@ -251,9 +251,6 @@ button {
   display: flex;
   justify-content: center;
 }
-.filter-item {
-  margin-right: 8px;
-}
 .filter-item:not(:last-child) {
   margin-right: 8px;
 }
@@ -329,6 +326,9 @@ button {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+.logotype {
+  margin-bottom: 20px;
 }
 .footer-logo-second-word {
   color: var(--some-title-color);
